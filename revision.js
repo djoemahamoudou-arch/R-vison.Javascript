@@ -99,6 +99,15 @@ let fusionTableauxfruitslegume = [...tableauFruits, ...tableauLegumes];
 console.log("Fusion des fruit et légumes  : ", ...tableauFruits, ...tableauLegumes);
 
 
+
+
+
+
+/*==========================*/
+
+
+
+
 // la notion de MAP
 // Une MAP permet de structurer(coder)les information sous forme de couple.
 // Le couple est formé d'une clé et d'une valeur clée-valeur ou key-value (anglais)
@@ -111,8 +120,72 @@ let mapVetements = new Map([
 ]);
 console.log(mapVetements);
 
+console.log("## mapVetements initiall :", mapVetements);
+
+// J'utilise des Getters et setters pour manipuler la map
+// Getteur (anglais) signifie accesseurs.
+// Pour accéder , j'utilise la methode get().
+
+console.log("t-shirt :" ,mapVetements.get("t-shirt"));
+
+console.log("salouva :", mapVetements.get("salouva"), "robes :",mapVetements.get("robes"));
+
+// Setter (anglais)signifie modifieur.
+// il permet de modifier le couple dans la map ou d'ajouter un nouveau 
+
+mapVetements.set("patalon",150);
+
+console.log("## mapVetements modifié : ", mapVetements);
+
+// afficher les valeur de variable mapVetement
+
+mapVetements.forEach(function(value,key){
+    console.log(key,' = ',value);
+});
+
+// vérifie si t-shirt existe ou pas
+console.log("t-shirt : " , mapVetements.has());
+
+console.log("=============================");
 
 
+let couplesMap = mapVetements.entries();
+console.log("couplesMap" , couplesMap);
+
+for(let couple of couplesMap){
+    console.log(couple);
+}
+
+console.log("=============================");
+for(let c of mapVetements.entries()){
+    console.log(c);
+}
+
+
+
+
+console.log("=============================");
+
+/* la methode value() récupérer uniquement les valeur(valeur).*/
+let valeurs = mapVetements.values()
+console.log("Je récupere que les valeur :", valeurs);
+
+
+
+
+
+
+console.log("================================");
+
+
+
+
+//récuperer les valeur uniquement sans tableau.
+
+for(let valeur of mapVetements.values()){
+    console.log(valeur)
+
+};
 
 
         
