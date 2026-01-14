@@ -188,6 +188,7 @@ for(let valeur of mapVetements.values()){
 };
 
 
+
         
 
 
